@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import './App.css';
+import {GlobalStyle} from './global.styles';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component.jsx';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx'
@@ -40,6 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle/>
         <Header/>
         <Switch>
           <Route exact path='/' component={HomePage}/>
